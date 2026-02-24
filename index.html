@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Tapas</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/landingPage.css">
+      <link rel="stylesheet" href="./css/insertar.css">
+      <link rel="shortcut icon" href="./svg/logoTapasFavicon.svg" type="image/x-icon">
+   </head>
+   <body>
+      <!-- Barra de Navegación -->
+      <header>
+         <nav class="nav">
+            <a href="./index.html"><img src="./svg/logoTapas.svg" alt='logos'/></a>
+            <div>
+               <ul class="nav-list" id="menu">
+                  <li class="dropdown" id="acceso">
+                     <a href="#">Acceder</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="./login.html">Loguearse</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                     </ul>
+                  </li>
+
+                  <li class="dropdown" id="userIdentificado">
+                     <a href="#" id="identificador"></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#" id="insertar">Insertar Tapa</a></li>
+                        <li><a href="#" id="logOut">Cerrar sesion</a></li>
+                     </ul>
+                  </li>
+
+                  <li><a href="#tapas">Tapas</a></li>
+                  <li><a href="#contact">Contacto</a></li>
+               </ul>
+               <ul class="dropdown" id="hamburguesa">
+                  <hr>
+                  <hr>
+                  <hr>
+                  <ul class="nav-list">
+                     <li class="dropdown">
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Loguearse</a></li>
+                        <li><a href="#">Registrarse</a></li>
+                        <li><a href="#">Buscar</a></li>
+                        <li><a href="#tapas">Tapas</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <main>
+      <div id="carousel-container">
+         <button class="carousel-prev">←</button>
+         <div class="carousel-slide active">
+            <picture>
+               <source
+                   srcset="./img/croquetas-330x220.webp 480w"
+                   media="(max-width: 480px)"
+                   type="image/webp">
+       
+               <source
+                   srcset="./img/croquetas-600x400.webp 768w"
+                   media="(max-width: 768px)"
+                   type="image/webp">
+       
+               <source
+                   srcset="./img/croquetas-1200x600.webp 1200w"
+                   media="(max-width: 1200px)"
+                   type="image/webp">
+
+               <img src="./img/croquetas-1.webp	" loading="lazy">
+           </picture>
+            <!-- <img src="./img/croquetas.webp" alt="Imagen 1" loading="lazy"> -->
+         </div>
+         <div class="carousel-slide">
+            <picture>
+               <source
+                   srcset="./img/calamares-330x220.webp 480w"
+                   media="(max-width: 480px)"
+                   type="image/webp">
+
+               <source
+                   srcset="./img/calamares-600x400.webp 768w"
+                   media="(max-width: 768px)"
+                   type="image/webp">
+       
+               <source
+                   srcset="./img/calamares-1200x600.webp 1200w"
+                   media="(max-width: 1200px)"
+                   type="image/webp">
+       
+              
+                   
+               <img src="./img/calamares-1.webp" loading="lazy">
+           </picture>
+         </div>
+         <div class="carousel-slide">
+            <picture>
+               <source
+                   srcset="./img/sandwich-330x220.webp 480w"
+                   media="(max-width: 480px)"
+                   type="image/webp">
+       
+               <source
+                   srcset="./img/sandwich-600x400.webp 768w"
+                   media="(max-width: 768px)"
+                   type="image/webp">
+       
+               <source
+                   srcset="./img/sandwich-1200x600.webp 1200w"
+                   media="(max-width: 1200px)"
+                   type="image/webp">
+       
+               
+                   
+               <img src="./img/sandwich.webp" loading="lazy">
+           </picture>
+         </div>
+         <button class="carousel-next">→</button>
+      </div>
+      
+      <!-- Sección de Tapas -->
+      <section>
+         <div id="formInsertar">
+            <form action="" method="post" id="formulario">
+               <h2 id="titulo">Insertar Tapas</h2>
+               <label for="nombreBar">Nombre del Bar:</label>
+               <input type="text" name="nombreBar" id="nombreBar" class="nombreBar" required>
+               <label for="nombreTapa">Nombre Tapa:</label>
+               <input type="text" name="nombreTapa" id="nombreTapa" class="nombreTapa"  required>
+               <label for="foto">Imagen de la Tapa:</label>
+               <input type="file" name ="foto" id="foto" required>
+               <label for="descripcion">Decripcion de la tapa</label>
+               <textarea name="descripcion" id="descripcion" cols="25"></textarea>
+               <label for="direccion">Direcion del Bar</label>
+               <input type="text" name="direccion" id="direccion" class="direccion" required>
+               <label for="Telefono">Telefono del bar</label>
+               <input type="number" name="telefono" id="telefono" class="telefono" required>
+               <label for="latitud">latitud del bar</label>
+               <input type="number" name="latitud" id="latitud" class="latitud" required>
+               <label for="longitudf">Longitud del bar</label>
+               <input type="number" name="longitud" id="longitud" class="longitud" required>
+               <label for="hora_apertura">Hora de apertura</label>
+               <input type="time" name="hora_apertura" id="hora_apertura" class="hora_apertura" required>
+               <label for="hora_cierre">Hora de cierre</label>
+               <input type="time" name="hora_cierre" id="hora_cierre" class="hora_cierre" required>
+               <label for="ingredientes">Ingredientes</label>
+               <textarea name="ingredientes" id=" ingredientes" cols="25"></textarea>
+               <p id="mensaje"></p>
+               <div id="botones">
+                  <!-- <input type="submit" value="Enviar" name="enviar" class="enviar" id="enviar">
+                  <input type="submit" value="Modificar" name="modificar" class="modificar" id="modificar"> -->
+               </div>
+
+            </form>
+            <button id="volver">Volver</button>
+         </div>
+      
+         
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="tituloModal">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar"></button>
+               </div>
+               <div class="modal-body" id="modal-contenido">
+                  <h2 class="modal-title fs-5" id="nombreTapaModal"></h2>
+                  <div class="ingredientes">
+                     <h3 class="modal-title fs-6">Ingredientes:</h3>
+                     <ul id="ingredientes">
+
+                     </ul>
+                  </div>
+               </div>
+               <div class="modal-footer" id="modalFooter">
+                  <button type="button" class="btn btn-danger" id="eliminar">Eliminar</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Cerrar</button>
+                  <button type="button" class="btn btn-primary" id="modificarModal">Modificar</button>
+               </div>
+            </div>
+            </div>
+         </div>
+         <div id="tapas">
+            <h2>Tapas</h2>
+            <button id="filtroFav">Ver mis favoritos</button>
+            <div class="tapasGrid" id="tapasGrid">
+               <!-- Button trigger modal -->
+            </div>
+            <div class="botones">
+               <div id="btnAnterior" class="btnAnterior btn btn-primary">Anterior</div>
+               <p id="numPage">1</p>
+               <div id="btnSiguiente" class="btnSiguiente btn btn-primary">Siguiente</div>  
+            </div>
+         </div>
+      </section>
+   </main>
+      
+      <!-- Pie de Página -->
+      <footer id="contact">
+         <div>&copy; Todos los derechos reservados. Concurso tapas de León, Tapas Gavela.</div>
+         <div class="iconos">
+            <a href="#"><img src="./svg/insta.svg" alt="Logo Instagram"></a>
+            <a href="#"><img src="./svg/yt2.svg" alt="Logo Instagram"></a>
+            <a href="#"><img src="./svg/X.svg" alt="Logo Instagram"></a>
+            <a href="#"><img src="./svg/facebook.svg" alt="Logo Instagram"></a>
+         </div>
+         <div id="contacto"><div>Telefono: 612215421</div> <div> Correo: tapasGavela@gmail.com</div></div>
+      </footer>
+      <script src="./js/carrusel.js"></script>
+      <script type="module" src="./js/landingPage.js"></script>
+       <script type="module" src="./js/creadorTapas.js"></script>
+      <script type="module" src="./js/insertar.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>

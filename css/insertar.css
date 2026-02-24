@@ -1,0 +1,66 @@
+#formInsertar{
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    button{
+        width: 200px;
+        border-radius: 15px;
+        border: none;
+        background-color: rgba(128, 128, 128, 0.735);
+        padding: 5px;
+        margin-top: 15px;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.925);
+    }
+}
+form{
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #d8d8d8;
+    border: solid 1px rgba(128, 128, 128, 0.735);
+    width: 40%;
+    max-width: 400px;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    & h2{
+        margin-top: 0px;
+    }
+
+    & label{
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    & input{
+        width: 75%;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        border: none;
+    }
+
+    & .enviar{
+        cursor: pointer;
+    }
+    
+    & #insertarIngredientes{
+        width: 80%;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

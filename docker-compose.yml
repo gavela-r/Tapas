@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+
+  web:
+    build: .
+    container_name: web_tapleon
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: db_tapleon
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tapleon
+      MYSQL_USER: tapleon
+      MYSQL_PASSWORD: tapleon
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
